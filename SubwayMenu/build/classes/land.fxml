@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+        <HBox alignment="CENTER" prefHeight="800.0" prefWidth="700.0">
+            <children>
+                <VBox alignment="CENTER" spacing="3.5" prefHeight="600.0" prefWidth="667.0">
+                    <children>
+                      <Label layoutX="285.0" layoutY="14.0" text="Welcome to Subway!" />
+                       <SplitPane dividerPositions="0.5184381778741866" layoutX="27.0" layoutY="37.0" prefHeight="427.0" prefWidth="600.0">
+                         <items>
+                           <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="425.0" prefWidth="300.0">
+                                <children>
+                                   <Label layoutX="129.0" layoutY="14.0" />
+                                   <VBox alignment="TOP_CENTER" prefHeight="425.0" prefWidth="300.0" spacing="3.5">
+                                      <children>
+                                         <Label text="Sandwich Creation" />
+                                         <Separator prefWidth="200.0" />
+                                         <Label text="Size">
+                                            <VBox.margin>
+                                               <Insets top="7.0" />
+                                            </VBox.margin>
+                                         </Label>
+                                         <Button mnemonicParsing="false" onAction="#displaySize" text="Add" />
+                                         <Separator prefHeight="0.0" prefWidth="448.0" />
+                                         <Label text="Bread" />
+                                         <Button mnemonicParsing="false" onAction="#displayBread" text="Add" />
+                                         <Separator prefWidth="200.0" />
+                                         <Label text="Meat" />
+                                         <Button mnemonicParsing="false" onAction="#displayMeat" text="Add" />
+                                         <Separator prefWidth="200.0" />
+                                         <Label text="Cheese" />
+                                         <Button mnemonicParsing="false" onAction="#displaycheese" text="Add" />
+                                         <Separator prefWidth="200.0" />
+                                         <Label text="Veggies" />
+                                         <Button mnemonicParsing="false" onAction="#displayVeggies" text="Add" />
+                                         <Separator prefWidth="344.0" />
+                                         <Label text="Sauce" />
+                                         <Button mnemonicParsing="false" onAction="#displaySauce" text="Add" />
+                                         <Separator prefWidth="200.0" />
+                                         <Label text="Seasoning" />
+                                         <Button mnemonicParsing="false" onAction="#displaySeasoning" text="Add" />
+                                      </children>
+                                   </VBox>
+                                </children>
+                           </AnchorPane>
+                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="425.0" prefWidth="300.0">
+                                <children>
+                                   <VBox alignment="TOP_CENTER" prefHeight="427.0" prefWidth="300.0" spacing="3.5">
+                                      <children>
+                                         <Label text="Overview">
+                                            <VBox.margin>
+                                               <Insets />
+                                            </VBox.margin>
+                                         </Label>
+                                         <Separator prefWidth="200.0" />
+                                         <Label text="Size">
+                                            <VBox.margin>
+                                               <Insets top="7.0" />
+                                            </VBox.margin>
+                                         </Label>
+                                         <TextField prefHeight="25.0" prefWidth="286.0" fx:id="sizeSelected" editable="false" />
+                                         <Separator prefWidth="200.0">
+                                            <VBox.margin>
+                                               <Insets />
+                                            </VBox.margin>
+                                         </Separator>
+                                         <Label text="Bread" />
+                                         <TextField fx:id="breadSelected" editable="false" />
+                                         <Separator prefWidth="200.0" />
+                                         <Label text="Meat" />
+                                         <TextField fx:id="meatSelected" editable="false" />
+                                         <Separator prefWidth="200.0" />
+                                         <Label text="Cheese" />
+                                         <TextField fx:id="cheeseSelected" editable="false" />
+                                         <Separator prefWidth="200.0" />
+                                         <Label text="Veggies" />
+                                         <TextField fx:id="veggiesSelected" editable="false" />
+                                         <Separator prefWidth="200.0" />
+                                         <Label text="Sauce" />
+                                         <TextField fx:id="sauceSelected" editable="false" />
+                                         <Separator prefWidth="200.0" />
+                                         <Label text="Seasoning" />
+                                         <TextField fx:id="seasoningSelected" editable="false" />
+                                      </children>
+                                   </VBox>
+                                </children>
+                             </AnchorPane>
+                         </items>
+                       </SplitPane>
+                       <VBox alignment="CENTER" prefHeight="200" prefWidth="600.0" spacing="5.0">
+                           <children>
+                                <Label text="Ticket #001" />
+                                <TextField fx:id="Ticket" editable="false" prefWidth="100.0" prefHeight="20.0" maxWidth="300.0" />
+                                <TextField fx:id="MeatTicket" editable="false" prefWidth="100.0" prefHeight="20.0" maxWidth="300.0" />
+                                <TextField fx:id="CheeseTicket" editable="false" prefWidth="100.0" prefHeight="20.0" maxWidth="300.0" />
+                                <TextField fx:id="VeggieTicket" editable="false" prefWidth="100.0" prefHeight="20.0" maxWidth="300.0" />
+                                <TextField fx:id="SauceTicket" editable="false" prefWidth="100.0" prefHeight="20.0" maxWidth="300.0" />
+                                <TextField fx:id="SeasoningTicket" editable="false" prefWidth="100.0" prefHeight="20.0" maxWidth="300.0" />
+                                <Label text="Total" />
+                                <TextField fx:id="Price" editable="false" prefWidth="45.0" maxWidth="80.0" prefHeight="20.0" />
+                           </children>
+                       </VBox>
+                    </children>
+                 </VBox>
+            </children>
+        </HBox>
+   </children>
+</AnchorPane>
