@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane prefHeight="336.0" prefWidth="395.0">
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Hit" />
+                        <Button fx:id="hitButton" disable="true" mnemonicParsing="false" onAction="#hit" text="Hit" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Stand" />
+                        <Button fx:id="standButton" disable="true" mnemonicParsing="false" onAction="#stand" text="Stand" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Shuffle Deck" />
+                        <Button id="shuffleButton" fx:id="shuffleButton" alignment="CENTER" mnemonicParsing="false" onAction="#startGame" prefHeight="78.0" prefWidth="46.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                            <graphic>
+                                <ImageView fitHeight="78.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="https://vignette.wikia.nocookie.net/yugioh-x13/images/e/e5/Back-EN.png/revision/latest?cb=20091230090502" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Label fx:id="roundMessage" ellipsisString="" prefHeight="17.0" prefWidth="131.0" translateX="-10.0" translateY="-230.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Label>
+               </children></HBox>
+         </bottom>
+         <top>
+            <Label text="Blackjack" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Player 1 Score">
+                     <VBox.margin>
+                        <Insets top="80.0" />
+                     </VBox.margin></Label>
+                  <TextField fx:id="playerScore" editable="false" />
+                  <Label text="Points" />
+                  <TextField fx:id="userPointCount" editable="false" text="0" />
+               </children></VBox>
+         </left>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Computer Score">
+                     <VBox.margin>
+                        <Insets top="80.0" />
+                     </VBox.margin></Label>
+                  <TextField fx:id="cpuScore" editable="false" />
+                  <Label text="Points" />
+                  <TextField fx:id="cpuPointCount" editable="false" text="0" />
+                  <Button fx:id="playAgainButton" mnemonicParsing="false" onAction="#playAgain" text="Play Again" translateY="70.0" visible="false" />
+               </children></VBox>
+         </right>
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="191.0" prefWidth="195.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="cpuCards" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="CPU">
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="userCards" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="User" translateY="20.0">
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin></VBox>
+         </center></BorderPane>
+   </children>
+</GridPane>
