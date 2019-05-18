@@ -2,4 +2,4 @@
 
 # <https://otc.zoom.us/j/4174478150?status=success>
 
-![Alt Text](tutorial.gif)
+![Alt Text](imgs/tutorial.gif)
